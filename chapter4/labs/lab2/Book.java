@@ -1,13 +1,10 @@
 package chapter4.labs.lab2;
 
-import lombok.Setter;
-
 /**
  * Lab 2: 생성자 활용하기
  *
  * Book 클래스 정의하기
  */
-@Setter
 public class Book {
   // TODO: 제목, 저자, 가격, 출판연도를 저장할 수 있는 필드를 정의하세요.
   private String title;
@@ -50,4 +47,7 @@ public class Book {
     System.out.println("Title: " + title + "\nAuthor: " + author + "\nPrice: " + price + "\nYear: " + year);
   }
 
+  public void setTitle(String title) {
+    this.title = title;
+  }
 }
