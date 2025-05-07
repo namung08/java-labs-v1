@@ -13,13 +13,13 @@ public class AnimalTest {
         System.out.println("Lab 2: 추상 클래스 활용하기 실습");
 
         // TODO: Dog 객체 생성
-        Dog dog = new Dog("corgi", true, "gogi", 1);
+        Animal dog = new Dog("corgi", true, "gogi", 1);
 
         // TODO: Cat 객체 생성
-        Cat cat = new Cat("korean short hair", "pig", 2);
+        Animal cat = new Cat("korean short hair", "pig", 2);
 
         // TODO: Bird 객체 생성
-        Bird bird = new Bird(10, "parrot", "cherry", 3);
+        Animal bird = new Bird(10, "parrot", "cherry", 3);
 
         // TODO: 각 동물의 정보와 소리 출력
         dog.print();
