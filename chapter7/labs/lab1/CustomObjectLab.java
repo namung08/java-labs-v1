@@ -125,13 +125,11 @@ class Book {
     // 1. 참조가 동일한지 확인 (this == obj)
     // 2. null 체크 및 타입 비교 (obj != null && getClass() == obj.getClass())
     // 3. 적절한 형변환 후 필드 비교
-
     @Override
-    public boolean equals(Object obj) {
-        if (super.equals(obj)) return true;
-        if (obj == null || this.getClass() != obj.getClass()) return false;
-        Book book = (Book) obj;
-        return this.isbn == book.getIsbn() && this.title.equals(book.getTitle()) && this.author.equals(book.getAuthor()) && this.price.equals(book.getPrice());
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(getIsbn(), book.getIsbn());
     }
 
     // TODO: hashCode() 메소드를 오버라이딩하여 equals와 일관되게 동작하도록 구현하세요.
